@@ -1,29 +1,23 @@
+import FilterBar from "./FilterBar";
+import { Link } from "react-router-dom";
+import PopUpMenu from "./PopUpMenu.jsx";
+
 export default function Header() {
+
     return (
-        <>
-            <div className="header">
-                <div className="logo">
-                    <a href="#">
-                        <img src="/images/logo-bookmark.svg" alt="logo" />
-                    </a>
-                </div>
-                <div className="nav">
-                    <ul>
-                        <li><a href="#features">FEATURES</a></li>
-                        <li><a href="#pricing">PRICING</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                        <div className="loginPages">
-                            <li><a href="#" className="login">LOGIN</a></li>
-                        </div>
-                    </ul>
-                    <label className="hamburger-menu" >
-                        <input type="checkbox" name="hamburger-menu" />
-                        <span className="line"></span>
-                        <span className="line"></span>
-                        <span className="line"></span>
-                    </label>
+        <div className="header">
+            <div className="headerContent">
+                <Link to={'/'}><h1>devjobs</h1></Link>
+                <div className="lightDark">
+                    <img src="/images/sun-icon.svg" alt='sun-icon'/>
+                    <div onClick={() => document.body.classList.toggle("dark-theme")} className="themeBtn">
+                        <span></span>
+                    </div>
+                    <img src="/images/moon-icon.svg" alt="moon-icon"/>
                 </div>
             </div>
-        </>
+            <FilterBar/>
+            <PopUpMenu />
+        </div>
     )
 }

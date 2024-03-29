@@ -1,0 +1,251 @@
+@media only screen and (max-width: 825px) {
+    .container {
+        max-width: 689px;
+    }
+
+    .headerContent {
+        padding: 0 40px !important; ;
+    }
+
+    .jobAdvertisement {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 11px;
+    }
+
+
+    .searchInput {
+        flex: 1;
+    }
+
+    .only {
+        display: none;
+    }
+
+    .filterBtn {
+        min-width: 80px;
+        padding: 16px 14px;
+    }
+
+    .header {
+        margin-bottom: 168px;
+    }
+
+    .detailHeader {
+        max-width: 689px;
+        top: 95%;
+    }
+
+    .details {
+        max-width: 689px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    .container {
+        max-width: 327px;
+    }
+
+    .headerContent {
+        padding: 0 24px !important;
+    }
+
+    .jobAdvertisement {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filterBar {
+        max-width: 327px;
+    }
+
+    .searchInput {
+        padding: 24px 0px 24px 12px;
+        background-image: unset;
+    }
+
+    .locationInput {
+        display: none;
+    }
+
+    .timeCheckInput {
+        display: none;
+    }
+
+    .filterBtn {
+        background-image: url('/images/search-mobile-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+        padding: 24px 14px;
+        min-width: 48px;
+
+        & span {
+            display: none;
+        }
+    }
+
+    .mobileMenuBtn {
+        display: block;
+        background-image: url("/images/mobile-menu.svg");
+        padding: 20px;
+        background-color: var(--white);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+        width: 48px;
+        height: 48px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .popUpMenuContainer {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .popUpMenuContainer.active {
+        display: block;
+    }
+
+    .popUpMenu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%);
+        z-index: 1001;
+        background-color: var(--White);
+        width: 327px;
+        height: 212px;
+        padding: 24px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .timeCheckInputMobile {
+        display: flex;
+        gap: 16px;
+        margin: 24px 0;
+
+        & .only {
+            display: block;
+        }
+    }
+
+    .locationInputMobile {
+        background-image: url("/images/location-icon.svg");
+        background-repeat: no-repeat;
+        background-position: left 4px center;
+        background-size: 16px 24px;
+        color: var(--GrayBlack);
+        background-color: var(--Filters-bg-color);
+        padding: 12px 12px 12px 32px;
+        border: none;
+        outline: none;
+        appearance: none;
+        border-bottom: 1px solid rgba(110, 128, 152, .2);
+        cursor: pointer;
+        flex: 1;
+    }
+    .locationInputMobile::placeholder {color: var(--Placeholder);}
+
+
+
+    .filterBtnMobile {
+        min-width: 141px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #fff;
+        background-color: #5964e0;
+        border-radius: 5px;
+        padding: 16px 20px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: background-color .2s ease-out;
+        text-decoration: none;
+    }
+
+    .filterBtnMobile:hover {background-color: #939bf4;}
+
+
+    .header {
+        margin-bottom: 120px;
+        height: 136px;
+    }
+
+    .detailHeader {
+        max-width: 327px;
+        height: 205px;
+        flex-direction: column;
+        top: 90%;
+        text-align: center;
+
+        & .leftside {
+
+            & .logo {
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px !important;
+                height: 50px !important;
+                border-radius: 15px;
+            }
+        }
+
+        & button {
+            margin: 0 0 32px;
+        }
+    }
+
+    .detailHeaderTitle {
+        margin-top: 50px;
+    }
+
+    .details {
+        max-width: 327px;
+        padding: 24px;
+        margin: 220px auto;
+        & .detailTitle {
+            flex-direction: column;
+            gap: 50px;
+            & button {
+                width: 100%;
+            }
+            & h2 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .detailFooter {
+        & .footer {
+            width: 100%;
+
+            & a {
+                width: 100%;
+
+                & button {
+                    width: 100%;
+                    padding: 14px 28px;
+                }
+            }
+        }
+    }
+
+    .footerTitle {
+        display: none;
+    }
+}
